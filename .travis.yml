@@ -14,7 +14,7 @@ notifications:
 install:
   - npm ci # faster, goes only from package-lock
 before_script:
-  - psql -c 'create database "recipe-test";' -U postgres # remember to change this name if you change it elsewhere (e.g. package.json)
+  - psql -c 'create database "namchikimchi-test";' -U postgres # remember to change this name if you change it elsewhere (e.g. package.json)
 
 before_deploy:
   - npm run build-client # make the bundle
@@ -24,4 +24,4 @@ deploy:
   provider: heroku
   app: namchikimchi # see README
   api_key:
-    secure: YOUR-***ENCRYPTED***-API-KEY-HERE # see README
+    secure: m5tCXC8Z2JUcJti/dpd4k+EZMGe8oyDOGLaWrdoo9v8OFqdPWCmsPQ6dy2BOjJx2NwuI0ncodb/maOxtPaMNBeTUX0olmFh6xuW7Tke2tet3jXa/N2KakcIUJE5jYUTRIXcwN/OB1hP6WUPfHMdRXa41UQEvVYONyHwERfjhrk2DpAIcyGCS7ZJjnq6C+ux91OcuEXZBYSSaUblxGsG+I9Xh/Vg0TfhixEhCkL6y5+g1+9qBLg7oq8t+7ABdFqW2BjW3JNBJMNUjPv5sJ7nzmh/XXBM62Zpl4d/Nxjxrd/gNBoXqVytxTcFDNaM69aBA0/VPp8zv1lFE+ln5SCeGpgWlcD9fWYQujCN4OTIrE8q8e+GIgxgUyOuFZ+bvgabMjWYlPuGUzAqqIoaQ5FE0lAwkNxO1Mbpa4qrhEA3rW8WkG4JyU4Dy+LH3gweJe8wWM1dVkc4N3GypykZj47ums53vqPIYWTJ84dRsSeOgJgyHlQxSKug1BGiTvPT6UJ0cp87LpB0/qBwsH1TXsTb180HTb2KVu3vwewWxKmG0ZaETUPIf8VJO5jl7IX+Ya46FOwDfk8PtMhMwhhUBeAVnIT0CnpvYplfKhFfqcdeAtzfdz5xe0rw5fapWeCWZ8CNWf4KMeUGfje20ehGvRyRXNXo9BffeKvy6VuFalFAdjKM= # see README
